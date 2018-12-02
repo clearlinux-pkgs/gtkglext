@@ -4,7 +4,7 @@
 #
 Name     : gtkglext
 Version  : 1.2.0
-Release  : 6
+Release  : 8
 URL      : http://downloads.sourceforge.net/gtkglext/gtkglext-1.2.0.tar.gz
 Source0  : http://downloads.sourceforge.net/gtkglext/gtkglext-1.2.0.tar.gz
 Summary  : OpenGL Extension to GTK
@@ -12,22 +12,16 @@ Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
 Requires: gtkglext-lib = %{version}-%{release}
 Requires: gtkglext-license = %{version}-%{release}
-BuildRequires : automake
-BuildRequires : automake-dev
 BuildRequires : buildreq-gnome
-BuildRequires : gettext-bin
 BuildRequires : gfortran
 BuildRequires : glu-dev
 BuildRequires : gtk+-dev
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
+BuildRequires : libXmu-dev
 BuildRequires : libXt-dev
-BuildRequires : libtool
-BuildRequires : libtool-dev
-BuildRequires : m4
 BuildRequires : mesa-dev
 BuildRequires : perl
-BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(pangox)
 BuildRequires : pkgconfig(xmu)
 BuildRequires : xorg-server-dev
@@ -84,8 +78,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543754178
-%reconfigure --disable-static
+export SOURCE_DATE_EPOCH=1543763659
+%configure --disable-static
 make  %{?_smp_mflags}
 
 %check
@@ -96,7 +90,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1543754178
+export SOURCE_DATE_EPOCH=1543763659
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gtkglext
 cp COPYING %{buildroot}/usr/share/package-licenses/gtkglext/COPYING
@@ -115,10 +109,12 @@ cp COPYING.LIB %{buildroot}/usr/share/package-licenses/gtkglext/COPYING.LIB
 /usr/include/gtkglext-1.0/gdk/gdkgldefs.h
 /usr/include/gtkglext-1.0/gdk/gdkgldrawable.h
 /usr/include/gtkglext-1.0/gdk/gdkglenumtypes.h
+/usr/include/gtkglext-1.0/gdk/gdkglfont.h
 /usr/include/gtkglext-1.0/gdk/gdkglglext.h
 /usr/include/gtkglext-1.0/gdk/gdkglinit.h
 /usr/include/gtkglext-1.0/gdk/gdkglpixmap.h
 /usr/include/gtkglext-1.0/gdk/gdkglquery.h
+/usr/include/gtkglext-1.0/gdk/gdkglshapes.h
 /usr/include/gtkglext-1.0/gdk/gdkgltokens.h
 /usr/include/gtkglext-1.0/gdk/gdkgltypes.h
 /usr/include/gtkglext-1.0/gdk/gdkglversion.h
@@ -144,6 +140,7 @@ cp COPYING.LIB %{buildroot}/usr/share/package-licenses/gtkglext/COPYING.LIB
 /usr/lib64/pkgconfig/gdkglext-x11-1.0.pc
 /usr/lib64/pkgconfig/gtkglext-1.0.pc
 /usr/lib64/pkgconfig/gtkglext-x11-1.0.pc
+/usr/share/aclocal/*.m4
 
 %files doc
 %defattr(0644,root,root,0755)
@@ -179,9 +176,9 @@ cp COPYING.LIB %{buildroot}/usr/share/package-licenses/gtkglext/COPYING.LIB
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libgdkglext-x11-1.0.so.0
-/usr/lib64/libgdkglext-x11-1.0.so.0.200.0
+/usr/lib64/libgdkglext-x11-1.0.so.0.0.0
 /usr/lib64/libgtkglext-x11-1.0.so.0
-/usr/lib64/libgtkglext-x11-1.0.so.0.200.0
+/usr/lib64/libgtkglext-x11-1.0.so.0.0.0
 
 %files license
 %defattr(0644,root,root,0755)

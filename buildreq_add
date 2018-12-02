@@ -7,3 +7,4 @@ buildreq-gnome
 libXt-dev
 gtk-doc
 gtk-doc-dev
+libXmu-dev
