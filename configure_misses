@@ -1,0 +1,6 @@
+Configure miss: strerror in -lcposix
+Configure miss: indent
+Configure miss: Xmu/StdCmap.h
+Configure miss: glVertex3d in -lGLcore
+Configure miss: whether libGLU needs to be linked with the std C++ library
+Configure miss: GLXFBConfigIDSGIX

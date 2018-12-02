@@ -1,0 +1,7 @@
+# This file contains pkgconfig build requirements that get picked up
+# but are undesirable. One entry per line, no whitespace.
+\gdk_pkg
+\gmodule_pkg
+\gtk_pkg
+\pango_pkg
+\pangox_pkg
