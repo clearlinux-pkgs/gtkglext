@@ -5,3 +5,5 @@ xorg-server-dev
 mesa-dev
 buildreq-gnome
 libXt-dev
+gtk-doc
+gtk-doc-dev

@@ -1,6 +1,9 @@
-Configure miss: strerror in -lcposix
-Configure miss: indent
-Configure miss: Xmu/StdCmap.h
-Configure miss: glVertex3d in -lGLcore
-Configure miss: whether libGLU needs to be linked with the std C++ library
+Configure miss: lib.exe
+Configure miss: whether we are using the Microsoft C compiler
+Configure miss: OpenGL/gl.h
+Configure miss: OpenGL/glu.h
+Configure miss: varargs GLU tesselator callback function type
 Configure miss: GLXFBConfigIDSGIX
+Configure miss: glxinfo.c:142:4: warning: format not a string literal and no format arguments [-Wformat-security]
+
+Configure miss: glxinfo.c:152:13: warning: format not a string literal and no format arguments [-Wformat-security]
