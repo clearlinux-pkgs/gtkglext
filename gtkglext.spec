@@ -4,13 +4,12 @@
 #
 Name     : gtkglext
 Version  : 1.2.0
-Release  : 4
+Release  : 6
 URL      : http://downloads.sourceforge.net/gtkglext/gtkglext-1.2.0.tar.gz
 Source0  : http://downloads.sourceforge.net/gtkglext/gtkglext-1.2.0.tar.gz
 Summary  : OpenGL Extension to GTK
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
-Requires: gtkglext-data = %{version}-%{release}
 Requires: gtkglext-lib = %{version}-%{release}
 Requires: gtkglext-license = %{version}-%{release}
 BuildRequires : automake
@@ -40,19 +39,10 @@ GtkGLExt is an OpenGL extension to GTK. It provides the GDK objects
 which support OpenGL rendering in GTK, and GtkWidget API add-ons to
 make GTK+ widgets OpenGL-capable.
 
-%package data
-Summary: data components for the gtkglext package.
-Group: Data
-
-%description data
-data components for the gtkglext package.
-
-
 %package dev
 Summary: dev components for the gtkglext package.
 Group: Development
 Requires: gtkglext-lib = %{version}-%{release}
-Requires: gtkglext-data = %{version}-%{release}
 Provides: gtkglext-devel = %{version}-%{release}
 
 %description dev
@@ -70,7 +60,6 @@ doc components for the gtkglext package.
 %package lib
 Summary: lib components for the gtkglext package.
 Group: Libraries
-Requires: gtkglext-data = %{version}-%{release}
 Requires: gtkglext-license = %{version}-%{release}
 
 %description lib
@@ -95,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543752931
+export SOURCE_DATE_EPOCH=1543754178
 %reconfigure --disable-static
 make  %{?_smp_mflags}
 
@@ -107,7 +96,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1543752931
+export SOURCE_DATE_EPOCH=1543754178
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gtkglext
 cp COPYING %{buildroot}/usr/share/package-licenses/gtkglext/COPYING
@@ -116,12 +105,6 @@ cp COPYING.LIB %{buildroot}/usr/share/package-licenses/gtkglext/COPYING.LIB
 
 %files
 %defattr(-,root,root,-)
-
-%files data
-%defattr(-,root,root,-)
-/usr/lib64/girepository-1.0/GdkGLExt-1.0.typelib
-/usr/lib64/girepository-1.0/GtkGLExt-1.0.typelib
-/usr/share/gir-1.0/*.gir
 
 %files dev
 %defattr(-,root,root,-)

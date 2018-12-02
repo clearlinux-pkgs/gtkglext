@@ -25,6 +25,7 @@ libgdkglext-x11-1.0.so.0:gdk_gl_config_new_by_mode
 libgdkglext-x11-1.0.so.0:gdk_gl_config_new_by_mode_for_screen
 libgdkglext-x11-1.0.so.0:gdk_gl_config_new_for_screen
 libgdkglext-x11-1.0.so.0:gdk_gl_context_copy
+libgdkglext-x11-1.0.so.0:gdk_gl_context_destroy
 libgdkglext-x11-1.0.so.0:gdk_gl_context_get_current
 libgdkglext-x11-1.0.so.0:gdk_gl_context_get_gl_config
 libgdkglext-x11-1.0.so.0:gdk_gl_context_get_gl_drawable
@@ -272,7 +273,6 @@ libgdkglext-x11-1.0.so.0:gdk_gl_get_GL_VERSION_3_0
 libgdkglext-x11-1.0.so.0:gdk_gl_get_GL_VERSION_3_1
 libgdkglext-x11-1.0.so.0:gdk_gl_get_GL_VERSION_3_2
 libgdkglext-x11-1.0.so.0:gdk_gl_get_GL_WIN_swap_hint
-libgdkglext-x11-1.0.so.0:gdk_gl_get_binary_age
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glActiveProgramEXT
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glActiveStencilFaceEXT
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glActiveStencilFaceNV
@@ -2096,14 +2096,12 @@ libgdkglext-x11-1.0.so.0:gdk_gl_get_glXSwapIntervalSGI
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glXWaitForMscOML
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glXWaitForSbcOML
 libgdkglext-x11-1.0.so.0:gdk_gl_get_glXWaitVideoSyncSGI
-libgdkglext-x11-1.0.so.0:gdk_gl_get_interface_age
-libgdkglext-x11-1.0.so.0:gdk_gl_get_major_version
-libgdkglext-x11-1.0.so.0:gdk_gl_get_micro_version
-libgdkglext-x11-1.0.so.0:gdk_gl_get_minor_version
 libgdkglext-x11-1.0.so.0:gdk_gl_get_proc_address
 libgdkglext-x11-1.0.so.0:gdk_gl_init
 libgdkglext-x11-1.0.so.0:gdk_gl_init_check
+libgdkglext-x11-1.0.so.0:gdk_gl_parse_args
 libgdkglext-x11-1.0.so.0:gdk_gl_pbuffer_attrib_get_type
+libgdkglext-x11-1.0.so.0:gdk_gl_pixmap_destroy
 libgdkglext-x11-1.0.so.0:gdk_gl_pixmap_get_pixmap
 libgdkglext-x11-1.0.so.0:gdk_gl_pixmap_get_type
 libgdkglext-x11-1.0.so.0:gdk_gl_pixmap_impl_x11_get_type
@@ -2117,6 +2115,7 @@ libgdkglext-x11-1.0.so.0:gdk_gl_render_type_get_type
 libgdkglext-x11-1.0.so.0:gdk_gl_render_type_mask_get_type
 libgdkglext-x11-1.0.so.0:gdk_gl_transparent_type_get_type
 libgdkglext-x11-1.0.so.0:gdk_gl_visual_type_get_type
+libgdkglext-x11-1.0.so.0:gdk_gl_window_destroy
 libgdkglext-x11-1.0.so.0:gdk_gl_window_get_type
 libgdkglext-x11-1.0.so.0:gdk_gl_window_get_window
 libgdkglext-x11-1.0.so.0:gdk_gl_window_impl_x11_get_type
@@ -2142,6 +2141,7 @@ libgdkglext-x11-1.0.so.0:gdk_x11_gl_query_glx_extension
 libgdkglext-x11-1.0.so.0:gdk_x11_gl_window_get_glxwindow
 libgtkglext-x11-1.0.so.0:gtk_gl_init
 libgtkglext-x11-1.0.so.0:gtk_gl_init_check
+libgtkglext-x11-1.0.so.0:gtk_gl_parse_args
 libgtkglext-x11-1.0.so.0:gtk_widget_create_gl_context
 libgtkglext-x11-1.0.so.0:gtk_widget_get_gl_config
 libgtkglext-x11-1.0.so.0:gtk_widget_get_gl_context
