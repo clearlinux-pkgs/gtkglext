@@ -10281,7 +10281,7 @@ index e1bf38e..0000000
 -	gdkglext_micro_version
 -	gdkglext_minor_version
 diff --git a/gdk/gdkglext.def b/gdk/gdkglext.def
-index b3b54cb..60c35d5 100644
+index b3b54cb..16a037f 100644
 --- a/gdk/gdkglext.def
 +++ b/gdk/gdkglext.def
 @@ -25,7 +25,6 @@ EXPORTS
@@ -10308,26 +10308,15 @@ index b3b54cb..60c35d5 100644
  	gdk_gl_drawable_attrib_get_type
  	gdk_gl_drawable_get_current
  	gdk_gl_drawable_get_gl_config
-@@ -60,8 +50,6 @@ EXPORTS
- 	gdk_gl_drawable_wait_gl
- 	gdk_gl_event_mask_get_type
- 	gdk_gl_event_type_get_type
--	gdk_gl_font_use_pango_font
--	gdk_gl_font_use_pango_font_for_display
- 	gdk_gl_get_GL_3DFX_tbuffer
- 	gdk_gl_get_GL_APPLE_element_array
- 	gdk_gl_get_GL_APPLE_fence
-@@ -1315,9 +1303,7 @@ EXPORTS
- 	gdk_gl_get_wglWaitForSbcOML
- 	gdk_gl_init
+@@ -1317,7 +1307,6 @@ EXPORTS
  	gdk_gl_init_check
--	gdk_gl_parse_args
+ 	gdk_gl_parse_args
  	gdk_gl_pbuffer_attrib_get_type
 -	gdk_gl_pixmap_destroy
  	gdk_gl_pixmap_get_pixmap
  	gdk_gl_pixmap_get_type
  	gdk_gl_pixmap_new
-@@ -1330,7 +1316,6 @@ EXPORTS
+@@ -1330,7 +1319,6 @@ EXPORTS
  	gdk_gl_render_type_mask_get_type
  	gdk_gl_transparent_type_get_type
  	gdk_gl_visual_type_get_type
@@ -10335,15 +10324,6 @@ index b3b54cb..60c35d5 100644
  	gdk_gl_window_get_type
  	gdk_gl_window_get_window
  	gdk_gl_window_new
-@@ -1353,8 +1338,3 @@ EXPORTS
- 	gdk_window_is_gl_capable
- 	gdk_window_set_gl_capability
- 	gdk_window_unset_gl_capability
--	gdkglext_binary_age
--	gdkglext_interface_age
--	gdkglext_major_version
--	gdkglext_micro_version
--	gdkglext_minor_version
 diff --git a/gdk/gdkglfont.h b/gdk/gdkglfont.h
 deleted file mode 100644
 index 6aaca13..0000000
@@ -93540,18 +93520,6 @@ index 6bb2dd7..5c85b0b 100644
 +
 +CLEANFILES += $(gir_DATA) $(typelib_DATA)
 +endif # HAVE_INTROSPECTION
-diff --git a/gtk/gtkglext.def b/gtk/gtkglext.def
-index dec1511..5a027e8 100644
---- a/gtk/gtkglext.def
-+++ b/gtk/gtkglext.def
-@@ -2,7 +2,6 @@ EXPORTS
- 	gtk_gl_debug_flags
- 	gtk_gl_init
- 	gtk_gl_init_check
--	gtk_gl_parse_args
- 	gtk_widget_create_gl_context
- 	gtk_widget_get_gl_config
- 	gtk_widget_get_gl_context
 diff --git a/gtk/gtkglinit.c b/gtk/gtkglinit.c
 index 05117ee..8b8ec98 100644
 --- a/gtk/gtkglinit.c
