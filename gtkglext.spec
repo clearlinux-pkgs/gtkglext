@@ -4,7 +4,7 @@
 #
 Name     : gtkglext
 Version  : 1.2.0
-Release  : 9
+Release  : 10
 URL      : https://sourceforge.net/projects/gtkglext/files/gtkglext/1.2.0/gtkglext-1.2.0.tar.gz
 Source0  : https://sourceforge.net/projects/gtkglext/files/gtkglext/1.2.0/gtkglext-1.2.0.tar.gz
 Summary  : OpenGL Extension to GTK
